@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Task Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1><i class="fas fa-tasks"></i> TaskFlow</h1>
+            <p>Organize your work in style</p>
+        </header>
+
+        <main class="app-main">
+            <div class="task-input-group">
+                <input type="text" id="newTaskInput" placeholder="What needs to be done?">
+                <button id="addTaskBtn">
+                    <i class="fas fa-plus"></i> Add
+                </button>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+
+            <div class="task-stats">
+                <span id="taskCounter">0 tasks</span>
+                <button id="clearCompleted">Clear Completed</button>
+            </div>
+
+            <ul id="taskList" class="task-list">
+                <!-- Tasks will appear here dynamically -->
+            </ul>
+        </main>
+
+        <footer class="app-footer">
+            <p>Made with <i class="fas fa-heart"></i> for productive people</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
